@@ -8,7 +8,9 @@ export type ArticleMeta = {
   excerpt: string
   image?: string
   published?: boolean
-  readingTime: number
+  externalPublicationName?: string
+  externalPublicationUrl?: string
+  readingTime?: number
 }
 
 export type Article = ArticleMeta & {
@@ -23,7 +25,8 @@ type FrontMatterAttributes = {
   excerpt: string
   image?: string
   published?: boolean
-  readingTime: number
+  externalPublicationName?: string
+  externalPublicationUrl?: string
 }
 
 const articleModules = import.meta.glob("../content/articles/*.md", {
@@ -51,6 +54,8 @@ function parseArticle(raw: string): Article {
     excerpt: attributes.excerpt,
     image: attributes.image,
     published: attributes.published ?? true,
+    externalPublicationName: attributes.externalPublicationName,
+    externalPublicationUrl: attributes.externalPublicationUrl,
     readingTime: getReadingTime(body),
     content: body,
   }

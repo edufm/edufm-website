@@ -57,6 +57,24 @@ export default function ArticlePage() {
           {article.excerpt}
         </p>
 
+        {article.externalPublicationName && article.externalPublicationUrl ? (
+          <div className="mt-6 inline-flex flex-wrap items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+            <span>
+              Publicado originalmente em{" "}
+              <span className="font-semibold">{article.externalPublicationName}</span>
+            </span>
+
+            <a
+              href={article.externalPublicationUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-[#0d59f2] transition hover:opacity-80"
+            >
+              Ver publicação original ↗
+            </a>
+          </div>
+        ) : null}
+
         {article.image ? (
           <div className="mt-8 overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800">
             <img
