@@ -29,7 +29,7 @@ export default function Articles() {
         </h1>
 
         <div className="w-full max-w-md">
-          <label className="flex h-12 w-full items-center overflow-hidden rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm transition focus-within:border-[#0d59f2] dark:border-slate-800 dark:bg-slate-900/80">
+          <label className="flex h-12 w-full items-center overflow-hidden rounded-xl border border-slate-200 backdrop-blur-sm transition focus-within:border-[#0d59f2] dark:border-slate-800">
             <span className="px-4 text-slate-400">⌕</span>
             <input
               type="text"
@@ -46,7 +46,7 @@ export default function Articles() {
         {filteredArticles.map((article) => (
           <article
             key={article.slug}
-            className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/80 p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900/70 dark:hover:border-slate-700 dark:hover:shadow-black/20 sm:p-6"
+            className="group relative overflow-hidden rounded-3xl border border-slate-200/80 p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-200/50 dark:border-slate-800 dark:hover:border-slate-700 dark:hover:shadow-black/20 sm:p-6"
           >
             <div className="flex flex-col gap-6 md:flex-row md:items-stretch">
               <div className="w-full shrink-0 md:w-[320px]">
@@ -67,13 +67,27 @@ export default function Articles() {
                     {article.category}
                   </span>
 
-                  <time className="text-sm font-medium text-slate-500 dark:text-slate-500">
-                    {formatArticleDate(article.date)}
+                  <time className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                    {article.date}
                   </time>
-                   
-                  <span className="text-sm font-medium text-slate-500 dark:text-slate-500">
+
+                  <span className="text-slate-400">•</span>
+
+                  <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
                     {article.readingTime} min de leitura
                   </span>
+
+                  {article.externalPublicationName ? (
+                    <>
+                      <span className="text-slate-400">•</span>
+                      <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                        Publicado em{" "}
+                        <span className="font-semibold text-slate-700 dark:text-slate-200">
+                          {article.externalPublicationName}
+                        </span>
+                      </span>
+                    </>
+                  ) : null}
                 </div>
 
                 <h2 className="mb-3 text-2xl font-bold leading-tight tracking-tight text-slate-900 transition-colors group-hover:text-[#0d59f2] dark:text-slate-100 sm:text-3xl">
