@@ -1,73 +1,129 @@
-# React + TypeScript + Vite
+# edufm.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site pessoal de Eduardo Ferrari.
 
-Currently, two official plugins are available:
+O objetivo do site é reunir artigos, projetos e um breve histórico
+profissional em um formato simples, rápido e totalmente estático.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O site foi construído com foco em:
 
-## React Compiler
+-   simplicidade
+-   performance
+-   controle total sobre o conteúdo
+-   facilidade para escrever novos artigos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Todo o conteúdo dos artigos é escrito em **Markdown**, permitindo
+versionamento direto no Git e um fluxo simples de publicação.
 
-## Expanding the ESLint configuration
+------------------------------------------------------------------------
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-   React
+-   Vite
+-   TailwindCSS
+-   React Router
+-   React Markdown
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O site é totalmente **estático** e pode ser hospedado em qualquer
+serviço de static hosting (GitHub Pages, Cloudflare Pages, Netlify,
+etc).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+------------------------------------------------------------------------
+
+## Estrutura do projeto
+
+    src/
+      components/        # Componentes reutilizáveis
+      pages/             # Páginas do site
+      articles/          # Artigos em Markdown
+      data/              # Metadados e helpers
+      assets/            # Imagens e recursos
+
+    public/              # Arquivos públicos (favicon, CV, etc)
+
+Os artigos ficam na pasta:
+
+    src/articles
+
+Cada artigo é um arquivo `.md`.
+
+Exemplo:
+
+    src/articles/tecnologia-como-meio.md
+
+------------------------------------------------------------------------
+
+## Escrevendo artigos
+
+Cada artigo utiliza **frontmatter** para os metadados.
+
+Exemplo:
+
+``` markdown
+---
+title: Tecnologia não é fim. É meio.
+date: 2026-01-07
+readingTime: 3 min
+external:
+  name: TIInside
+  url: https://tiinside.com.br/07/01/2026/tecnologia-como-meio-nao-como-vaidade/
+---
+
+Conteúdo do artigo em Markdown...
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+------------------------------------------------------------------------
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Rodando localmente
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Instalar dependências:
+
+``` bash
+npm install
 ```
+
+Rodar o ambiente de desenvolvimento:
+
+``` bash
+npm run dev
+```
+
+O site estará disponível em:
+
+    http://localhost:5173
+
+------------------------------------------------------------------------
+
+## Build
+
+Para gerar o build estático:
+
+``` bash
+npm run build
+```
+
+Os arquivos finais serão gerados em:
+
+    dist/
+
+------------------------------------------------------------------------
+
+## Recursos
+
+O site inclui alguns recursos simples mas úteis:
+
+-   modo claro / escuro
+-   artigos escritos em Markdown
+-   tempo estimado de leitura
+-   indicação de publicação externa
+-   design minimalista
+-   build totalmente estático
+
+------------------------------------------------------------------------
+
+## Licença
+
+Este projeto está disponível para uso como referência pessoal.
+
+Conteúdo dos artigos © Eduardo Ferrari.
