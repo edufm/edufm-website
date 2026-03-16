@@ -30,7 +30,7 @@ export default function ArticlePage() {
   }
 
   return (
-    <article className="mx-auto max-w-3xl py-10 sm:py-14">
+    <article className="mx-auto max-w-3xl">
       <Link
         to="/articles"
         className="inline-flex items-center gap-2 text-sm font-semibold text-slate-500 transition hover:text-[#0d59f2] dark:text-slate-400"
