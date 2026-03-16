@@ -8,7 +8,6 @@ type LayoutProps = {
 
 const navItems = [
   { to: "/", label: "Home", end: true },
-  { to: "/projects", label: "Projetos" },
   { to: "/articles", label: "Artigos" },
   { to: "/principles", label: "Princípios" },
 ]
