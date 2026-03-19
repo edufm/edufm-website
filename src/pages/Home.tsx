@@ -52,7 +52,7 @@ export default function Home() {
           </div>
 
           <a
-            href="/Currículo - Eduardo Ferrari.pdf"
+            href="/files/CV_Eduardo_Ferrari.pdf"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-xl border border-zinc-200 px-4 py-3 text-sm font-semibold text-zinc-700 transition hover:border-[#0d59f2] hover:text-[#0d59f2] dark:border-zinc-800 dark:text-zinc-300"
