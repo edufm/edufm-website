@@ -1,0 +1,58 @@
+{
+  "menu.nav.home": "Home",
+  "menu.nav.articles": "Articles",
+  "menu.nav.principles": "Principles",
+  "menu.nav.projects": "Projects",
+  "menu.nav.eyebrow": "Technology, Business and Innovation",
+
+  "home.hero.eyebrow": "Founder · CTO · Quant",
+  "home.hero.title": "I build businesses and software where technology, data and finance meet.",
+  "home.hero.subtitle": "Founder, operator and builder with a background in quantitative modeling, financial markets and legal technology.",
+
+  "home.highlights.focus.label": "Focus",
+  "home.highlights.focus.value": "Technology applied to real problems",
+  "home.highlights.now.label": "Now",
+  "home.highlights.now.value": "Artemis, credit, data and operations",
+  "home.highlights.interests.label": "Interests",
+  "home.highlights.interests.value": "Innovation, strategy and execution",
+
+  "home.background.eyebrow": "Background",
+  "home.background.title": "A trajectory built across three fronts",
+  "home.background.subtitle": "From technical training and applied research, through quantitative finance, to building businesses grounded in technology and data.",
+  "home.background.downloadCv": "Download Resume",
+  "home.background.cvUrl": "/files/Resume_Eduardo_Ferrari.pdf",
+
+  "home.background.entrepreneur.title": "Entrepreneurship",
+  "home.background.entrepreneur.meta": "Product, operations and technology",
+  "home.background.entrepreneur.org": "Artemis Technologies",
+  "home.background.entrepreneur.description": "Today I work on building Artemis, combining software, data, operations and business structuring to transform legal claims into liquidity. My work sits at the intersection of product, execution, systems architecture and model development applied to real problems in the legal market.",
+
+  "home.background.quant.title": "Quant & Financial Markets",
+  "home.background.quant.meta": "Modeling, simulation and data",
+  "home.background.quant.org": "Pandhora · Vector · Itaú Asset",
+  "home.background.quant.description": "Work in quantitative finance focused on asset modeling, market simulation, systematic strategies and data infrastructure for analysis. This phase consolidated a way of thinking driven by hypothesis, measurement, risk and evidence-based decision-making.",
+
+  "home.background.education.title": "Education",
+  "home.background.education.meta": "Technical training and applied research",
+  "home.background.education.org": "Insper · ICMC/USP · FGV",
+  "home.background.education.description": "Education in Mechanical Engineering at Insper with a focus on computational simulation, data science and machine learning. Later, a specialization in data science at ICMC/USP built a strong foundation in modeling, quantitative research and analytical systems. Today, that technical background is complemented by executive education in business management at FGV.",
+
+  
+  "articles.top.title": "Articles and Insights",
+  "articles.search.placeholder": "Search articles...",
+  "articles.info.publishedAt": "Published at",
+  "articles.info.readTime": "min read",
+  "articles.info.read": "Read Article",
+
+
+  "article.error.label": "Error",
+  "article.error.title": "Article not found",
+  "article.error.description": "The content you are trying to access does not exist or has been removed.",
+  "article.back": "Back to articles",
+
+  "article.external.prefix": "Originally published on",
+  "article.external.link": "View original publication",
+
+  "principles.top.title": "Principles"
+
+}

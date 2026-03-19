@@ -1,18 +1,24 @@
 import type { ReactNode } from "react"
 import { NavLink, Link } from "react-router-dom"
 import ThemeToggle from "./ThemeToggle"
+import LanguageToggle from "./LanguageToggle"
+import { useTranslation } from "react-i18next"
 
 type LayoutProps = {
   children: ReactNode
 }
 
-const navItems = [
-  { to: "/", label: "Home", end: true },
-  { to: "/articles", label: "Artigos" },
-  { to: "/principles", label: "Princípios" },
-]
+
 
 export default function Layout({ children }: LayoutProps) {
+  const { t } = useTranslation()
+  
+  const navItems = [
+    { to: "/", label: t("menu.nav.home"), end: true },
+    { to: "/articles", label: t("menu.nav.articles") },
+    { to: "/principles", label: t("menu.nav.principles") },
+  ]
+
   return (
     <div className="min-h-screen bg-white text-zinc-900 transition-colors dark:bg-zinc-950 dark:text-zinc-100">
       <div className="mx-auto max-w-6xl px-6 py-8">
@@ -22,7 +28,7 @@ export default function Layout({ children }: LayoutProps) {
               Eduardo Ferrari
             </Link>
             <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-              Tecnologia, Negócios e Inovação.
+              {t("menu.nav.eyebrow")}
             </p>
           </div>
 
@@ -47,6 +53,8 @@ export default function Layout({ children }: LayoutProps) {
             </nav>
 
             <ThemeToggle />
+
+            <LanguageToggle/>
           </div>
         </header>
 

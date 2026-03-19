@@ -1,5 +1,5 @@
 ---
-slug: quando-o-modelo-burro-faz-falta
+slug: when-the-dumb-model-is-missed
 title: Quando o modelo “burro” faz falta. A decisão do Google de descontinuar o Gemini 2.0 Flash
 date: 2026-03-15
 category: Tecnologia

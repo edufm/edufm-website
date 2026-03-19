@@ -1,11 +1,15 @@
 import { useMemo, useState } from "react"
 import { Link } from "react-router-dom"
-import { formatArticleDate, getAllArticles } from "../lib/articles"
-
-const articles = getAllArticles()
+import { getAllArticles } from "../lib/articles"
+import { useTranslation } from "react-i18next"
 
 export default function Articles() {
+  const { t, i18n } = useTranslation()
   const [query, setQuery] = useState("")
+  
+  const articles = useMemo(() => {
+    return getAllArticles(i18n.resolvedLanguage ?? i18n.language)
+  }, [i18n.resolvedLanguage, i18n.language])
 
   const filteredArticles = useMemo(() => {
     const normalized = query.trim().toLowerCase()
@@ -19,13 +23,13 @@ export default function Articles() {
         article.excerpt.toLowerCase().includes(normalized)
       )
     })
-  }, [query])
+  }, [articles, query])
 
   return (
     <section className="mx-auto w-full max-w-6xl">
       <div className="mb-10 flex flex-col gap-6 lg:mb-14 lg:flex-row lg:items-end lg:justify-between">
         <h1 className="mb-4 text-4xl font-black tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl">
-          Artigos e reflexões
+          {t("articles.top.title")}
         </h1>
 
         <div className="w-full max-w-md">
@@ -33,7 +37,7 @@ export default function Articles() {
             <span className="px-4 text-slate-400">⌕</span>
             <input
               type="text"
-              placeholder="Buscar artigos..."
+              placeholder={t("articles.search.placeholder")}
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               className="h-full w-full border-none bg-transparent pr-4 text-sm text-slate-900 outline-none placeholder:text-slate-400 dark:text-slate-100"
@@ -74,14 +78,14 @@ export default function Articles() {
                   <span className="text-slate-400">•</span>
 
                   <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                    {article.readingTime} min de leitura
+                    {article.readingTime} {t("articles.info.readTime")}
                   </span>
 
                   {article.externalPublicationName ? (
                     <>
                       <span className="text-slate-400">•</span>
                       <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                        Publicado em{" "}
+                        {t("articles.info.publishedAt")}{" "}
                         <span className="font-semibold text-slate-700 dark:text-slate-200">
                           {article.externalPublicationName}
                         </span>
@@ -103,7 +107,7 @@ export default function Articles() {
                     to={`/articles/${article.slug}`}
                     className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-[#0d59f2]"
                   >
-                    Ler artigo
+                    {t("articles.info.read")}
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>

@@ -1,5 +1,5 @@
 ---
-slug: negocio-de-ia-solucao
+slug: ai-business-starts-with-problem
 title: Um negócio de IA começa no problema, não na demo
 date: 2025-08-13
 category: Tecnologia

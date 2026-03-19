@@ -29,11 +29,29 @@ type FrontMatterAttributes = {
   externalPublicationUrl?: string
 }
 
-const articleModules = import.meta.glob("../content/articles/*.md", {
-  query: "?raw",
-  import: "default",
-  eager: true,
-})
+function getArticleModules(language: string) {
+  var articleModules = {}
+  if (language === "en") {
+    articleModules = import.meta.glob("../content/en/articles/*.md", {
+      query: "?raw",
+      import: "default",
+      eager: true,
+    })
+  }
+
+  else if (language === "pt") {
+    articleModules = import.meta.glob("../content/pt/articles/*.md", {
+      query: "?raw",
+      import: "default",
+      eager: true,
+    })
+  }
+
+  return Object.values(articleModules)
+    .map((raw) => parseArticle(raw as string))
+    .filter((article) => article.published)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+}
 
 function normalizeDate(value: string | Date): string {
   if (value instanceof Date) {
@@ -61,28 +79,15 @@ function parseArticle(raw: string): Article {
   }
 }
 
-const allArticles = Object.values(articleModules)
-  .map((raw) => parseArticle(raw as string))
-  .filter((article) => article.published)
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-
-export function getAllArticles(): Article[] {
-  return allArticles
+export function getAllArticles(language: string): Article[] {
+  return getArticleModules(language)
 }
 
-export function getArticleBySlug(slug: string): Article | undefined {
-  return allArticles.find((article) => article.slug === slug)
+export function getArticleBySlug(language: string, slug: string): Article | undefined {
+  return getArticleModules(language).find((article) => article.slug === slug)
 }
 
 export function getReadingTime(text: string): number {
   const words = text.trim().split(/\s+/).length
   return Math.max(1, Math.ceil(words / 150))
-}
-
-export function formatArticleDate(date: string): string {
-  return new Intl.DateTimeFormat("pt-BR", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  }).format(new Date(date))
 }

@@ -1,5 +1,5 @@
 ---
-slug: segredo-da-ia-confiabilidade
+slug: ai-secret-is-reliability
 title: O segredo da IA é a confiabilidade
 date: 2025-10-19
 category: Tecnologia

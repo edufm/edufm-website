@@ -1,0 +1,57 @@
+{
+  "menu.nav.home": "Home",
+  "menu.nav.articles": "Artigos",
+  "menu.nav.principles": "Principios",
+  "menu.nav.projects": "Projetos",
+  "menu.nav.eyebrow": "Tecnologia, Negócios e Inovação.",
+
+  "home.hero.eyebrow": "Founder · CTO · Quant",
+  "home.hero.title": "Construo negócios e sistemas onde tecnologia, dados e finanças se encontram.",
+  "home.hero.subtitle": "Founder, operador e builder com trajetória em modelagem quantitativa, mercado financeiro e tecnologia aplicada ao setor jurídico.",
+
+  "home.highlights.focus.label": "Foco",
+  "home.highlights.focus.value": "Tecnologia aplicada a problemas reais",
+  "home.highlights.now.label": "Hoje",
+  "home.highlights.now.value": "Artemis, crédito, dados e operações",
+  "home.highlights.interests.label": "Interesses",
+  "home.highlights.interests.value": "Inovação, estratégia e execução",
+
+  "home.background.eyebrow": "Background",
+  "home.background.title": "Uma trajetória construída em três frentes",
+  "home.background.subtitle": "De formação técnica e pesquisa aplicada, passando pelo mercado financeiro quantitativo, até a construção de negócios baseados em tecnologia e dados.",
+  "home.background.downloadCv": "Baixar CV",
+  "home.background.cvUrl": "/files/Curriculum_Eduardo_Ferrari.pdf",
+
+  "home.background.entrepreneur.title": "Empreendedor",
+  "home.background.entrepreneur.meta": "Produto, operação e tecnologia",
+  "home.background.entrepreneur.org": "Artemis Technologies",
+  "home.background.entrepreneur.description": "Hoje atuo na construção da Artemis, unindo software, dados, operações e estruturação de negócio para transformar ativos judiciais em liquidez. Meu trabalho fica na interface entre produto, execução, arquitetura de sistemas e desenvolvimento de modelos aplicados a problemas reais do mercado jurídico.",
+
+  "home.background.quant.title": "Quant & Mercado Financeiro",
+  "home.background.quant.meta": "Modelagem, simulação e dados",
+  "home.background.quant.org": "Pandhora · Vector · Itaú Asset",
+  "home.background.quant.description": "Atuação em mercado financeiro quantitativo com foco em modelagem de ativos, simulação de mercado, estratégias sistemáticas e desenvolvimento de infraestrutura de dados para análise. Essa etapa consolidou uma forma de pensar orientada por hipótese, mensuração, risco e tomada de decisão baseada em evidência.",
+
+  "home.background.education.title": "Educação",
+  "home.background.education.meta": "Formação técnica e pesquisa aplicada",
+  "home.background.education.org": "Insper · ICMC/USP · FGV",
+  "home.background.education.description": "Formação em Engenharia Mecânica pelo Insper com foco em simulação computacional, ciência de dados e machine learning. Depois, especialização em ciência de dados no ICMC/USP, com forte base em modelagem, pesquisa quantitativa e construção de sistemas analíticos. Hoje, essa base técnica se complementa com uma formação executiva em gestão empresarial na FGV.",
+
+
+  "articles.top.title": "Artigos & Reflexões",
+  "articles.search.placeholder": "Buscar artigos...",
+  "articles.info.publishedAt": "Publicado em",
+  "articles.info.readTime": "min de leitura",
+  "articles.info.read": "Ler Artigo",
+
+  
+  "article.error.label": "Erro",
+  "article.error.title": "Artigo não encontrado",
+  "article.error.description": "O conteúdo que você tentou acessar não existe ou foi removido.",
+  "article.back": "Voltar para artigos",
+
+  "article.external.prefix": "Publicado originalmente em",
+  "article.external.link": "Ver publicação original",
+
+  "principles.top.title": "Principios"
+}

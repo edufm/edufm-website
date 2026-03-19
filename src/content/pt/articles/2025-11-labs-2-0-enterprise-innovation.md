@@ -1,5 +1,5 @@
 ---
-slug: labs-2-0-inovacao-empresas
+slug: labs-2-0-enterprise-innovation
 title: LABs 2.0 como as grandes empresas podem inovar de verdade em 2025
 date: 2025-11-26
 category: Tecnologia

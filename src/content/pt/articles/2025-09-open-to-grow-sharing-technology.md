@@ -1,5 +1,5 @@
 ---
-slug: abrir-para-crescer-compartilhar-tecnologia
+slug: open-to-grow-sharing-technology
 title: Abrir para crescer. Quando compartilhar tecnologia vira a melhor estratégia
 date: 2025-09-09
 category: Tecnologia

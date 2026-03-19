@@ -1,5 +1,5 @@
 ---
-slug: tecnologia-como-meio-nao-como-vaidade
+slug: technology-as-means-not-vanity
 title: Tecnologia como meio, não como vaidade
 date: 2026-01-07
 category: Tecnologia
